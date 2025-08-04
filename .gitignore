@@ -1,0 +1,21 @@
+# Ignorar a pasta Config
+/Config/
+
+# Exceto o arquivo de exemplo (não ignorar .env.example)
+!Config/.env.example
+
+# Composer
+/vendor/
+
+# IDEs
+.vscode/
+.idea/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs e caches
+*.log
+*.cache
+
