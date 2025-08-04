@@ -1,0 +1,27 @@
+{
+    "name": "bruno/teladelogin",
+  "autoload": {
+    "psr-4": {
+        "Library\\": "Library/",
+        "Model\\": "Model/",
+        "Control\\": "Control/",
+        "Core\\": "Core/",
+        "Session\\": "Session/",
+        "Widgets\\": "Widgets/",
+        "Utils\\": "Utils/",
+        "Database\\": "Database/"
+        
+    }
+},
+    "authors": [
+        {
+            "name": "Bruno",
+            "email": "brunoomendes20@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6",
+        "league/oauth2-google": "^4.0",
+        "twig/twig": "^3.21"
+    }
+}
