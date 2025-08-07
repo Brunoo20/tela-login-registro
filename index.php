@@ -3,6 +3,7 @@
 // Library loader
 require_once 'Core/ClassLoader.php';
 
+
 $al = new Core\ClassLoader();
 $al->addNamespace('Tela_de_login', '');
 $al->register();
@@ -18,6 +19,13 @@ $al->register();
 // Vendor
 $loader = require 'vendor/autoload.php';
 $loader->register();
+
+use Session\Session;
+
+new Session();
+if (!Session::getValue('enter')) {
+    header('Location: index-login.php');
+}
 
 // lê o conteúdo do template
 $template = file_get_contents('Templates/template.html');

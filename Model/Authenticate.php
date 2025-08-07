@@ -47,6 +47,7 @@ class Authenticate
                 'email' => $userFound['email'],
                 'avatar' => $userFound['avatar'],
             ];
+            $_SESSION['enter'] = true;
 
             header('Location: /Tela_de_Login/index.php');
             exit;

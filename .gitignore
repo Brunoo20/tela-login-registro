@@ -1,5 +1,5 @@
 # Ignorar a pasta Config
-/Config/
+/Config/*
 
 # Exceto o arquivo de exemplo (não ignorar .env.example)
 !Config/.env.example
