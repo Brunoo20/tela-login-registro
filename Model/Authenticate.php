@@ -29,7 +29,7 @@ class Authenticate
             // salva ou atualiza o usuário no banco (lógica de mesclagem)
             $user->saveOrUpdateGoogleUser();
 
-            // Busca o usuário para armazenar na sessão
+            // busca o usuário para armazenar na sessão
             $conn = Connection::open('database');
             $stmt = $conn->prepare('SELECT id, nome, email, avatar FROM usuarios WHERE email = :email');
             $stmt->execute(['email' => $googleUser->getEmail()]);
@@ -39,7 +39,7 @@ class Authenticate
                 throw new Exception('Erro: Usuário não encontrado após salvar.');
             }
 
-            // Inicia a sessão e armazena dados mínimos
+            // inicia a sessão e armazena dados mínimos
             session_start();
             $_SESSION['user'] = [
                 'id' => $userFound['id'],
