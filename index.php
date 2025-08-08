@@ -38,7 +38,7 @@ if ($_GET) {
     if (class_exists($class)) {
         try {
             $pagina = new $class(); // instancia a classe
-            ob_start(); // inicia controle de output
+            ob_start(); // inícia controle de output
             $pagina->show(); // exibe página
             $content = ob_get_contents(); // lê conteúdo gerado
             ob_end_clean(); // finaliza controle de output
